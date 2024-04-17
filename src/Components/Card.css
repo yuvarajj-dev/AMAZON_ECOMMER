@@ -1,0 +1,30 @@
+.Card{
+    width: 80%;
+}
+.card-img{
+    width: 10rem;
+    height: 12rem;
+}
+@media (width < 1280px){
+    .Card{
+        width: 90%;
+    }
+}
+
+@media (width < 1024px){
+
+}
+
+@media (width < 786px){
+
+}
+@media (width < 640px){
+    .Card{
+        width: 50%;
+    }
+}
+@media (width < 450px){
+    .Card{
+        width: 80%;
+    }
+}

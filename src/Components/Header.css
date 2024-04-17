@@ -1,0 +1,32 @@
+.navbar{
+    background-color: #232f3e;
+}
+.amazon-logo{
+    width: 10rem;
+    height: 5rem;
+}
+.list-menu{
+    font-size: 20px;
+    color: white;
+}
+.list-menu:hover{
+    color: orange;
+}
+.card-num{
+    background-color: red;
+    position: absolute;
+    width: 1.8rem;
+    right: 25px;
+    height: 1.8rem;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid white;
+    top: 25px;
+    color: white;
+    font-weight: 500;
+}
+@media (width < 640px) {
+    .card-num{
+        right: 15px;
+    }
+}
