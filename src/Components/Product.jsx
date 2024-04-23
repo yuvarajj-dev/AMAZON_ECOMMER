@@ -45,6 +45,17 @@ export default function Product(props) {
     })
     props.handlecart(count);
   }
+  function handledelete(value){
+    let tempobj = Data.map((val)=>{
+      if(val.name == value){
+        return { ...val, cart : val.cart = 0}
+      }else {
+        return val
+      }
+    })
+    setData(tempobj);
+  }
+
 
   return (
     <>
@@ -54,7 +65,7 @@ export default function Product(props) {
             <Card val={val} handleinc={(pname) => { handleinc(pname) }} handledec={(pname) => { handledec(pname) }} handlecart={(pname) => { handlecart(pname) }} />
           ))
         }
-        <Popup Data={Data} popupclose={(close)=>{props.popupclose(close)}} popup={props.popup} />
+        <Popup Data={Data} popupclose={(close)=>{props.popupclose(close)}} handledelete={(value)=>{handledelete(value)}} popup={props.popup} />
       </div>
     </>
   )

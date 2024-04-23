@@ -25,7 +25,7 @@ export default function Popup(props) {
                                             <p className='text-xl  mt-2'>{val.name}</p>
                                             <p>Rs.:{val.price * val.order}</p>
                                             <p>Quantity : {val.quantity * val.order}</p>
-                                            <button class="btn">
+                                            <button onClick={()=>(props.handledelete(val.name))} class="btn">
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     fill="none"
@@ -64,7 +64,6 @@ export default function Popup(props) {
                                                     </defs>
                                                 </svg>
                                             </button>
-
                                         </div>
                                     )
                                 } else {

@@ -7,7 +7,7 @@ export default function eCard(props) {
     <>
       <div className="Card mx-auto my-5 bg-white border border-gray-200 rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700">
         <a href="#">
-          <img className="rounded-t-lg shadow-xl w-1/2 card-img hover:animate-bounce mx-auto" src={props.val.image} alt={props.val.name} />
+          <img className="rounded-t-lg shadow-xl w-1/2 card-img hover:animate-pulse mx-auto" src={props.val.image} alt={props.val.name} />
         </a>
         <div className="p-5">
           {/* Heading section */}
