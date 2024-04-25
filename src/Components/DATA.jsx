@@ -7,6 +7,10 @@ const Arrayobj = [
         measure: "kg",
         order: 0,
         cart: 0,
+        extra: {
+            price:0,
+            quantity:0
+        },
     },
     {
         name: "Aroma Elanchi Soan Papdi-Made with Finest",

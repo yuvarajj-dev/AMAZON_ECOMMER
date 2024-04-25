@@ -23,8 +23,8 @@ export default function Popup(props) {
                                         <div className='popup-card p-5 font-bold text-center'>
                                             <img src={val.image} alt={val.name} />
                                             <p className='text-xl  mt-2'>{val.name}</p>
-                                            <p>Rs.:{val.price * val.order}</p>
-                                            <p>Quantity : {val.quantity * val.order}</p>
+                                            <p>Rs.:{val.extra.price}</p>
+                                            <p>Quantity : {val.extra.quantity}</p>
                                             <button onClick={()=>(props.handledelete(val.name))} class="btn">
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"

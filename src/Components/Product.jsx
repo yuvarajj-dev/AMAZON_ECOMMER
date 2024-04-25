@@ -30,13 +30,12 @@ export default function Product(props) {
   function handlecart(name) {
     let tempobj = Data.map((val) => {
       if (val.name == name && val.order > 0) {
-        return { ...val, cart: 1 }
+        return { ...val, cart: 1,extra :{price:val.price*val.order,quantity:val.quantity*val.order}}
       } else {
         return val;
       }
     })
     setData(tempobj);
-
     let count = 0;
     tempobj.forEach((val) => {
       if (val.cart == 1) {
@@ -45,11 +44,11 @@ export default function Product(props) {
     })
     props.handlecart(count);
   }
-  function handledelete(value){
-    let tempobj = Data.map((val)=>{
-      if(val.name == value){
-        return { ...val, cart : val.cart = 0}
-      }else {
+  function handledelete(value) {
+    let tempobj = Data.map((val) => {
+      if (val.name == value) {
+        return { ...val, cart: val.cart = 0 }
+      } else {
         return val
       }
     })
@@ -65,7 +64,7 @@ export default function Product(props) {
             <Card val={val} handleinc={(pname) => { handleinc(pname) }} handledec={(pname) => { handledec(pname) }} handlecart={(pname) => { handlecart(pname) }} />
           ))
         }
-        <Popup Data={Data} popupclose={(close)=>{props.popupclose(close)}} handledelete={(value)=>{handledelete(value)}} popup={props.popup} />
+        <Popup Data={Data}  popupclose={(close) => { props.popupclose(close) }} handledelete={(value) => { handledelete(value) }} popup={props.popup} />
       </div>
     </>
   )
